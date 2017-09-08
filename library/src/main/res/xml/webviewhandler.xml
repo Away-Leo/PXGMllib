@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget>
+<param>
+    <name value="gome_getphoto" />
+
+    <handler value="com.gome.webview.webviewbridge.PhotoHandler" />
+</param>
+
+</widget>
