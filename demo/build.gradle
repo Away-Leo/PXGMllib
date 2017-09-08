@@ -5,36 +5,36 @@ android {
     buildToolsVersion "26.0.0"
     defaultConfig {
         applicationId "com.pingxun.library.guomei"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    signingConfigs {
-        release {
-            keyAlias 'key1'
-            keyPassword '666666'
-            storeFile file('E:\\keystore\\PingXunApp')
-            storePassword '666666'
-        }
-        config {
-            keyAlias 'key1'
-            keyPassword '666666'
-            storeFile file('E:\\keystore\\PingXunApp')
-            storePassword '666666'
-        }
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            debuggable true
-            signingConfig signingConfigs.release
-        }
-        debug {
-            signingConfig signingConfigs.release
-        }
-    }
+//    signingConfigs {
+//        release {
+//            keyAlias 'key1'
+//            keyPassword '666666'
+//            storeFile file('E:\\keystore\\PingXunApp')
+//            storePassword '666666'
+//        }
+//        config {
+//            keyAlias 'key1'
+//            keyPassword '666666'
+//            storeFile file('E:\\keystore\\PingXunApp')
+//            storePassword '666666'
+//        }
+//    }
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            debuggable true
+//            signingConfig signingConfigs.release
+//        }
+//        debug {
+//            signingConfig signingConfigs.release
+//        }
+//    }
 }
 
 dependencies {
