@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         buttonPanel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, DemoActivity.class));
+                startActivity(new Intent(MainActivity.this, DemoActivity.class).putExtra("url","https://static-sit.gomemyf.com/flow-h5/#/index?fromChannel=miaobd&fromChannelId=miaobd1"));
             }
         });
     }

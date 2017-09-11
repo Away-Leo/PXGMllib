@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'maven'
 
 android {
     compileSdkVersion 26
@@ -21,9 +22,25 @@ android {
         }
     }
     //开启Java1.8 能够使用lambda表达式
-    compileOptions{
+    compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+
+                repository(url: "http://192.168.1.100:8081/nexus/content/repositories/central") {
+                    authentication(userName: "admin", password: "admin123")
+                }
+                pom.version = "1.0.0"
+                pom.artifactId = "GMlibrary"
+                pom.groupId = "com.pingxun.library"
+                pom.name = "GMlib"
+                pom.packaging = 'aar'
+            }
+        }
     }
 }
 
